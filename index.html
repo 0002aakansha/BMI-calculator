@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h2,
+        p {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .input-box {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+        }
+
+        label {
+            margin: .5rem 0;
+        }
+
+        input {
+            padding: .5rem 1rem;
+        }
+
+        .output-box {
+            margin: 1rem 0;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: purple;
+            border: none;
+            color: aliceblue;
+            padding: .5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .box{
+            background-color: #44546340;
+            padding: 1rem;
+        }
+
+        #alert{
+            margin: 0 0 2rem 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <div>
+                <h3 id="alert"></h3>
+            </div>
+            <div class="box">
+                <h2>Check your BMI</h2>
+                <p>Enter your weight and height below to check your BMI results</p>
+
+                <div class="form">
+                    <div class="input-box">
+                        <label for="weight">Put your weight in here (KG)</label>
+                        <input type="text" id="weight" placeholder="0" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="height">Put your height in here (CM)</label>
+                        <input type="text" id="height" placeholder="0" required>
+                    </div>
+                    <button id="btn" type="submit">Calculate BMI</button>
+                </div>
+                <div class="output-box">Your BMI is <span id="R1">0.0</span> <span id="R2"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
